@@ -1,0 +1,13 @@
+<mat-toolbar>
+    <span>Notes App</span>
+    <span class="spacer"></span>
+    <button routerLink="/notes/new" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>note_add</mat-icon>
+    </button>
+    <button (click)="logout()" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>logout</mat-icon>
+    </button>
+</mat-toolbar>
+<div class="container">
+    <router-outlet></router-outlet>
+</div>

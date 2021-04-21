@@ -1,0 +1,13 @@
+<div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="center" fxLayoutGap="20px">
+    <ng-container *ngIf="notes.length === 0; else elseTemplate">
+        <div fxFlex="20" fxFlex.lg="15" fxFlex.sm="30">
+            <h3>No hay notas registradas</h3>
+        </div>
+    </ng-container>
+    <ng-template #elseTemplate>
+        <div fxFlex="20" fxFlex.lg="15" fxFlex.sm="30" *ngFor="let note of notes">
+            <app-note (refresh)="getNotes()" [note]="note"></app-note>
+        </div>
+    </ng-template>
+    
+</div>

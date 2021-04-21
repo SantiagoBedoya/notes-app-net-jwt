@@ -1,0 +1,10 @@
+<mat-card>
+    <mat-card-content>
+        <h2>{{note.title}}</h2>
+        <p>{{note.description}}</p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button routerLink="./{{note.noteId}}/edit" mat-button>Editar</button>
+        <button (click)="deleteNote()" mat-button color="warn">Eliminar</button>
+    </mat-card-actions>
+</mat-card>
